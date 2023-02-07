@@ -1,0 +1,49 @@
+
+/* Mobile First */
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.column {
+  width: 100%;
+}
+
+.column:nth-child(1) {
+  background-color: pink;
+}
+
+.column:nth-child(2) {
+  background-color: red;
+}
+
+.column:nth-child(3) {
+  display: none;
+}
+
+.column:nth-child(4) {
+  display: none;
+}
+
+@media only screen and (min-width: 641px) {
+  .container {
+   flex-direction: row;
+  }
+  .column {
+    flex: 1;
+  }
+  .column:nth-child(1) {
+    background-color: blue;
+  }
+  .column:nth-child(2) {
+    background-color: purple;
+  }
+  .column:nth-child(3) {
+    background-color: grey;
+    display: block;
+  }
+  .column:nth-child(4) {
+    background-color: brown;
+    display: block;
+  }
+}
